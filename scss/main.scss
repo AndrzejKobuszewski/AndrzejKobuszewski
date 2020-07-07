@@ -1,0 +1,33 @@
+a {
+   text-decoration-style: none;
+    text-decoration: none;
+}
+.nav {
+    background-color:rgba($color: #000000, $alpha: 0.8);
+} 
+#projekty {
+    width: 98%;
+    margin-left: 1%; 
+}
+#intro {
+    position: relative;
+}
+.lead {
+position: absolute;
+top: 33%;
+left: 59%;
+}
+
+@media(max-width: 833px){
+.lead {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    span{
+        font-size: 80%;
+        padding-right: 8%;
+        background-color: lighten($color: grey, $amount: 6);}
+    
+    }
+
+}

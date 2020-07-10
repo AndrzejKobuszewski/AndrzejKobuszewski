@@ -35,11 +35,15 @@
                               <a class="nav-link" href="#capabilities">Umiejętności</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Kontakt</a>
-                              </li>
-                          </ul>
+                                <a class="nav-link" href="#Oferta">Oferta</a>
+                            </ul>
+                                
+                        </div>
+                        <div class="nav-item nav-link" style=" text-decoration: none; color: white;" id="clock">
+                                        
                         </div>
                       </nav>
+                      
         </header>
        
                 <section id="intro">
@@ -52,8 +56,7 @@
                                 </ul>
                               
                                 <!-- The slideshow -->
-                                <div class=" carousel-inner" style="height:98vh; background: rgb(223,222,237);
-                                background: linear-gradient(90deg, rgba(223,222,237,1) 0%, rgba(246,246,252,1) 100%);" >
+                                <div class=" carousel-inner" style="height:98vh; background-image: url('./img/tree.jpg'); background-size: cover;" >
                                 
                                   <div class=" row carousel-item active"   >
                                         <img src="./img/usmiechniety.png" style="height:600px" class="rounded"  alt="usmiechniety">     
@@ -75,12 +78,12 @@
                                 </a>
                 
                         </div>
-                        <div class="lead">  
+                        <div class="lead mr-5">  
                                 <span><i><q>Nawet z pozoru najdziwaczniejsza, najskromniejsza pasja jest czymś 
                                 bardzo, ale to bardzo cennym. </q>
                                 </i><br><span class="blockquote"><b><cite>- Stephen King </cite></span> </span>
                                 <div>
-                                <button type="button" class=" btn btn-success">Oferta</button>
+                                <button type="button" class=" btn btn-success" data-toggle="modal" data-target="#exampleModal" >Kontakt</button>
                                 <button type="button" class=" btn btn-info"><a  href="#projekty" style="text-decoration: none; color:cornsilk">Projekty</a></button>
                                 </div>
                         </div>
@@ -97,9 +100,77 @@
                                 
                                 <div class="container text-white py-4">
                                         <div class="row">
-                                                <h2 class="mx-auto mb-5">Projekty</h2>
-                                                </div>
-                                        <p>Poniższa tabela stanowi wykaz moich projektów zrealizowanych 
+                                                <h2 class="mx-auto mb-5">Projekty 
+                                                </h2>
+
+                                        <div id="like_button_container"></div>
+                                                              
+                                        </div>
+
+
+	
+        <div class="hexagony">
+                      <article class="article1 ">
+                              <figure><a href=# style="text-decoration: none; color: white;">
+                                      <h2><br>Kobuszewski.com<br></h2>
+                                      <p>Strona powstała podczas pandemii COVID19 w celu praktycznego zapoznania się z frameworkiem Bootstrap 4 oraz React.</p>
+                                </a>
+                                </figure>
+                                                                                                        
+                                 <img src="./img/react.png" alt = "react" title = "react" height="3vw">                                                    
+
+                      </article>
+                      <article class="article2">
+                              <figure><a href=# style="text-decoration: none; color: white;">
+                              <h2>Napędzamy Polskę 4.0</h2>
+                                      <p>Projekt strony inicjatywy, której celem jest wprowadzenie zarządzania mobilnością
+                                        w Polsce.</p>
+                                </a>
+                              </figure>
+                              <img  src="./img/phpmysql.jpeg" alt = "php, mysql" title = "php, mysql" height="40px">
+                      </article>
+                      <article class="article0">
+                              <figure>
+                                <h2>Projekty zrealizowane przeze mnie w ostatnich latach</h2>
+                                      <p></p>
+                              </figure>
+                              <img alt src='./img/xxxx.jpg' />
+                      </article>
+                      <article class="article3">
+                              <figure>
+                                      <h2>Tourfast.pl</h2><a href='http://www.tourfast.pl'target='blanc' style="text-decoration: none; color: white;">
+                              <p>Strona zrealizowana dla start-upu, oferującego szybkie zwiedzanie miasta stołecznego Warszawy.</p>
+                                 </a>
+                                </figure>
+                              <img alt src='./img/logo-elementor.png' />
+                      </article>
+                      <article class="article4">
+                              <figure>
+                                      <h2>Coders Lab<h2>
+                                              <p>Coders Lab to szkoła programowania. Zajęcia prowadzone były
+                                                w trybie dziennym w formie intensywnego bootcampu przez 2 miesiące.</p>
+                              </figure>
+                              <img alt src='./img/ajax-logo.jpg' />
+                      </article>
+                      <article class="article5">
+                              <figure>
+                                      <h2>Sieć Wewnętrzna</h2>
+                                      <p>Sieć wewnętrzna to codzienne czynności związane z administracją urządzeniami domowymi.</p>
+                              </figure>
+                              <img alt src='./img/ubuntu-logo.jpg' />
+                      </article>
+                      <article class="article6">
+                              <figure>
+                                      <h2>IT Service Management</h2>
+                                      <p>Zarządzanie usługami IT w transporcie towarzywszy mi przez całe życie zawodowe.</p>
+                              </figure>
+                              <img alt src='./img/DevOps-logo.png' />
+                      </article>
+                      
+                </div>
+                             
+                <div>
+                                        <p id="OpisProjektowTabela">Poniższa tabela stanowi wykaz moich projektów zrealizowanych 
                                         w ostatnich latach. Projektom zostały nadane nazwy robocze wraz z podaniem 
                                         nazw wykorzystanych technologii. W tabeli znajdują 
                                         się odnośniki do repozytariów na github lub do opublikowanych witryn.</p>            
@@ -132,7 +203,7 @@
                                                 <td colspan="4" >
                                                 Opis projektu "Kobuszewski.com":<br>
                                                 Strona powstała podczas pandemii COVID19 w celu praktycznego zapoznania się z frameworkiem Bootstrap 4 oraz React. 
-                                                Dodatkowo mając więcej czasu chciałbym pomóc firmom w przeniesieniu się z ich działalnością do sieci i stąd potrzebne mi portofolio zamieszczone na tej stronie.
+                                               
                                                 </td>
                                         </tr>
                                         
@@ -228,7 +299,7 @@
                                         <tr>
                                                 <td>Sieć wewnętrzna</td>
                                                 <td>
-                                                        <img src="./img/Dlink-logo.jpg" alt = "Dlink logo" title = "Dlink logo" height="40px"> 
+                                                        <img src="./img/vba-logo.jpg" alt = "vba logo" title = "vba logo" height="40px">
                                                         <img src="./img/synology.png" alt = "Synology logo" title = "Synology logo" height="40px">   
                                                         <img src="./img/Windows.png" alt = "Windows logo" title = "Windows logo" height="40px">
                                                         <img src="./img/android-logo.jpg" alt = "android logo" title = "android logo" height="40px">
@@ -237,6 +308,7 @@
                                                         <img src="./img/ansible-logo.jpg" alt = "ansible logo" title = "ansible logo" height="40px"> 
                                                         <img src="./img/arduino-logo.png" alt = "arduino logo" title = "arduino logo" height="40px"> 
                                                         <img src="./img/scratch-logo.png" alt = "scratch logo" title = "scratch logo" height="40px">
+                                                        
                                                 </td>
                                                 <td><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#opisN">Opis Projektu</button>
                                                 <td>-------</td>
@@ -285,9 +357,10 @@
                                 <!-- Container element -->
                               
 
-                </section>   
+                </div>   
+                </section>
                 <section id="capabilities">
-                        <div class="jumbotron-fluid container container-fluid" >
+                        <div class="jumbotron-fluid container container-fluid my-5" >
                                 <div class="row">
                                 <h2 class="mx-auto mb-5">Umiejętności</h2>
                                 </div>
@@ -314,7 +387,7 @@
                                         <li class="my-2">2016        Service Design – Prime Minister Office</li>                           
                                         <li class="my-2">2015	ITIL v.3 – CTPartners	</li>
                                         <li class="my-2">2015 	Detroit World ITS Congress</li>
-                                        <li class="my-2">2010, 2012	FRAME Architecture</li>
+                                      
                                 </ol>
                                 </div>  
                                 <div class="col-sm-4">
@@ -327,7 +400,150 @@
                                 </div>
                                 </div>
                         </div>
-                </section>     
+                </section>  
+                <section id="Oferta">  
+                        <div>
+                                <h1 style="white-space: nowrap; overflow: hidden; ">          Oferta <span class="badge badge-success">NOWOŚĆ   </span>          Oferta <span class="badge badge-success">NOWOŚĆ   </span>          Oferta <span class="badge badge-success">NOWOŚĆ    </span>          Oferta <span class="badge badge-success">NOWOŚĆ    </span>          Oferta <span class="badge badge-success">NOWOŚĆ    </span>          Oferta <span class="badge badge-success">NOWOŚĆ   </span>          Oferta <span class="badge badge-success">NOWOŚĆ   </span></h1>
+                                
+                        </div>
+                        <div class="jumbotron-fluid container container-fluid my-4" >
+                                <div class="row"> 
+                                        <div class="col-sm-3">
+                                                <div class="card promo1" style="width: 18rem;">
+                                                        <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                                                        <div class="mt-2 mx-5">
+                                                        <img src="./img/wall-clock.svg" class="card-img-top" style="height= 10vw" alt="1 godzina">
+                                                        </div>
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Jedna roboczogodzina mojej pracy nad Twoim projektem</h5>
+                                                          <p class="card-text"></p>
+                                                        <form>
+                                                          <div class="form-group">
+                                                                <label for="exampleInputEmail1">Liczba roboczogodzin:</label>
+                                                                <input type="number" class="form-control" placeholder="1">
+                                                                <small id="emailHelp" class="form-text text-muted">Wpisz liczbę roboczogodzin</small>
+                                                                <button type="button" class=" btn btn-info my-1" >Dodaj do koszyka</button>
+                                                                <small id="emailHelp" class="form-text text-muted">Pay Pal</small>
+                                                                <button type="button"class=" btn btn-success">KUP TERAZ </button>
+                                                        </div>
+                                                        </form>
+                                                        </div>
+                                                </div>
+                                        
+                                        </div>
+                                        <div class="col-sm-3">
+                                                <div class="card promo2" style="width: 18rem;">
+                                                        <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                                                        <div class="mt-2 mx-5">
+                                                        <img src="./img/schedule.svg" class="card-img-top" style="height=6vw" alt="1 dzień">
+                                                        </div>
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Jeden cały dzień roboczy mojej pracy nad Twoim projektem </h5>
+                                                          <p class="card-text"></p>
+                                                        <form>
+                                                          <div class="form-group">
+                                                                <label for="exampleInputEmail1">Liczba dni roboczych:</label>
+                                                                <input type="number" class="form-control" placeholder="1">
+                                                                <small id="emailHelp" class="form-text text-muted">Wpisz liczbę dni roboczych</small>
+                                                                <button type="button" class=" btn btn-info my-1" >Dodaj do koszyka</button>
+                                                                <small id="emailHelp" class="form-text text-muted">Pay Pal</small>
+                                                                <button type="button"class=" btn btn-success">KUP TERAZ </button>
+                                                        </div>
+                                                        </form>
+                                                        </div>
+                                                </div>
+                                        
+                                        </div>
+                                        <div class="col-sm-3">
+                                                <div class="card " style="width: 18rem;">
+                                                        <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                                                        <div class="mt-2 mx-5">
+                                                        <img src="./img/WholeOrder.svg" class="card-img-top" style="height=6vw" alt="zlecenie">
+                                                        </div>
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Zlecenie</h5>
+                                                          <p class="card-text"> Możesz złożyć całe zlecenie lub powierzyć fragmenty swojego projektu do kompleksowej realizacji. 
+                                                          <br> Możesz sprawdzić jak się ze mną pracuje - przyślij mi zadanie sprawdzające - to takie proste i nic Cię nie kosztuje.
+                                                          </p>
+                                                          <button type="button" class=" btn btn-success my-2 mb-3" data-toggle="modal" data-target="#exampleModal" >Kontakt</button>
+                                                        </div>
+                                                </div>
+                                        
+                                        </div>
+                                        <div class="col-sm-3">
+                                                <div class="card" style="width: 18rem;">
+                                                        <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                                                        <div class="mt-2 mx-5 mb-1">
+                                                        <img src="./img/shopping-cart.svg" class="card-img-top" style="height=6vw" alt="koszyk">
+                                                        </div>
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Koszyk </h5>
+                                                          <p class="card-text">
+                                                                Razem do zapłaty:
+
+                                                          </p>
+                                                          <p class="card-text">
+                                                                Liczba dni roboczych:
+
+                                                          </p>
+                                                          <p class="card-text">
+                                                                Liczba godzin roboczych:
+
+                                                          </p>
+                                                        <form>
+                                                          <div class="form-group">
+                                                                
+                                                                <small id="emailHelp" class="form-text text-muted">Zacznij zakupy od początku</small>
+                                                                <button type="button" class=" btn btn-info my-1" >Opróżnij koszyk</button>
+                                                                <small id="emailHelp" class="form-text text-muted mt-2">Pay Pal</small>
+                                                               
+                                                                <button type="button"class=" btn btn-success mb-1">KUP TERAZ </button>
+                                                        </div>
+                                                        </form>
+                                                        </div>
+                                                </div>
+                                        
+                                        </div>
+                                </div>
+                                <div class="row"></div>
+
+
+                        </div>
+                </section>    
+                <section id="Kontakt">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Nowa wiadomość do Andrzeja:</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <div class="form-group">
+                                                <label for="exampleInputEmail1">Adres e-mail nadawcy</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mickey@micesservername.com">
+                                                <small id="emailHelp" class="form-text text-muted">Nikomu nie udostępniam adresów e-mail</small>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="message-text" class="col-form-label">Treść wiadomości:</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button"  class="d-xl-none d-lg-none d-md-none btn btn-secondary"> <a href="callto://+48660675708">Porozmawiajmy</a></button>
+                                      <button type="button"  class="btn btn-secondary"> <a href="mailto:andrzej@kobuszewski.com">E-mail</a></button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                                      <button type="button" class="btn btn-success">Wyślij</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                </section>
         </main>
 
 <footer></footer>
@@ -338,4 +554,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin>
+</script><script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<script src="like_button.js"></script>
 </body>

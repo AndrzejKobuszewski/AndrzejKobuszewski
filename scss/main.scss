@@ -1,33 +1,215 @@
+
 a {
-   text-decoration-style: none;
     text-decoration: none;
+    color: white;
+&:hover{
+    text-decoration: none;
+    color: white;}
 }
-.nav {
-    background-color:rgba($color: #000000, $alpha: 0.8);
-} 
+.navbar-nav:last-child{
+    text-align: left;
+}
+.promo1::after {
+content: "30 zł";
+width: 50%;
+height: 2rem;
+color: green;
+background-color: yellowgreen;
+transform: rotate(315deg);
+position: absolute;
+top: 41px;
+left: -15px;
+font-size: 1.5rem;
+text-align: center;
+border-radius: 6px;
+}
+
+.promo2::after {
+    content: "200 zł";
+    width: 50%;
+    height: 2rem;
+    color: green;
+    background-color: yellowgreen;
+    transform: rotate(315deg);
+    position: absolute;
+    top: 41px;
+    left: -15px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 6px;
+    }
+
 #projekty {
+    
     width: 98%;
     margin-left: 1%; 
 }
-#intro {
+#intro .card {
     position: relative;
+}
+#OpisProjektowTabela {
+    margin-top: 48vw;
 }
 .lead {
 position: absolute;
 top: 33%;
 left: 59%;
+contain:"";
+background-color: rgba($color:#fff, $alpha: 0.5);
 }
 
+
+.hexagony{
+    position: relative;
+    margin-left: 16vw;
+    margin-right: auto;
+    *, *:after, *:before {box-sizing: inherit;}
+* {margin:0;padding:0;border: 0 none; position: relative;}
+:root {
+	--sinSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--Nhexa: 4;
+	--gap: 2vw;
+	--size: calc(calc(100vw / var(--Nhexa)) - var(--gap));
+}
+@media only screen and (min-width: 1100px) {:root {--Nhexa: 6;}}
+@media only screen and (max-width: 600px) {
+	:root {--Nhexa: 2;}
+	body {margin-right: calc(var(--size) * .3);}
+}
+html {
+	background: #e9e9e7;
+  box-sizing: border-box;
+	font-family: var(--sinSerif);
+	font-size: 1rem;
+}
+body {
+	padding-right: calc(var(--size) * .5);
+	overflow-X: hidden;
+	hyphens: auto;
+}
+section {
+
+  width: 100%;
+	display: grid;
+	grid-template-columns: repeat(var(--Nhexa), 1fr);
+	grid-gap: var(--gap);
+}
+article {
+	background: cadetblue;
+  width: 15vw; 
+  height: 13vw;
+	clip-path: url(#hexagono);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  
+	color: #fff;
+	overflow: hidden;
+}
+article:nth-child(2n) {}
+article::before {
+	content: '';
+	float: left;
+	width: 25%;
+	height: 100%;
+	clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+	shape-outside: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+}
+img {
+  width: 15vw;
+	height: 15vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: 0% 50%;
+	transition: .75s;
+	clip-path: url(#hexagono);
+	clip-path: inherit;
+	z-index:  10;
+}
+article:hover img {transform: translate(-50%, -50%) rotate(-110deg);}
+h2  {font-size: 100%;}
+figure {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	max-width: 50%;
+	height: 100%;
+	font-size: 1.2vw;
+	line-height: 1;
+	color: #fff;
+	transition: .75s .05s;
+  text-align: center;
+}
+figure p {
+	font-size: 70%;
+	line-height: 1.2;
+	width: 100%;
+}
+h1 {
+	width: 100vw;
+	background: #FF0066;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	margin-bottom: calc(var(--size) * .55 + var(--gap));
+	padding: 2vh 0;
+	text-align: center;
+	font-weight: 400;
+	color: #fff;
+}
+body > p {
+	font-size: 1.5rem;
+	margin: 2rem 0 1rem calc(var(--size) * .5);
+	font-weight: 200;
+}
+.article1 {
+    position: absolute;
+    top:0;
+    left:16vw;
+}
+.article2 {
+    position: absolute;
+    top: 8vw;
+    left: 2vw;
+}
+.article3 {
+    position: absolute;
+    top:8vw;
+    left: 30vw;
+}
+.article4 {
+    position: absolute;
+    top:24vw;
+    left: 2vw;
+}
+.article5 {
+    position: absolute;
+    top:24vw;
+    left: 30vw;
+}
+.article6 {
+    position: absolute;
+    top:32vw;
+    left:16vw ;
+}
+.article0 {
+    position: absolute;
+    top: 16vw;
+    left:16vw;
+   
+}
+}
 @media(max-width: 833px){
 .lead {
     position: absolute;
     top: 65%;
     left: 10%;
+    }
     span{
         font-size: 80%;
         padding-right: 8%;
-        background-color: lighten($color: grey, $amount: 6);}
+        }
     
     }
 
-}

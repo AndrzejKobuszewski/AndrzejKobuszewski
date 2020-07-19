@@ -1,5 +1,9 @@
 'use strict';
 
+ 
+
+
+
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
@@ -8,6 +12,7 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
+        
       return (<button onClick={() => this.setState({ liked: false }) }>
       Polubiłeś to :-)
     </button>);
@@ -30,14 +35,13 @@ function tick() {
     const element = (
       
 
-            <a>
+            <div className='clock text-white'> 
                                   
                 {new Date().toLocaleTimeString()}
-                </a>
+                </div>
      
     );
     ReactDOM.render(element, document.getElementById('clock'));}
   
   setInterval(tick, 1000);
-  
   

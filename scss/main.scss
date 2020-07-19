@@ -1,5 +1,5 @@
 
-a {
+a .clock{
     text-decoration: none;
     color: white;
 &:hover{
@@ -9,6 +9,15 @@ a {
 .navbar-nav:last-child{
     text-align: left;
 }
+.navbar{
+     position:fixed;
+
+}
+.clock{
+    text-decoration: none;
+    color: white;
+    float: rigth;}
+    
 .promo1::after {
 content: "30 zł";
 width: 50%;

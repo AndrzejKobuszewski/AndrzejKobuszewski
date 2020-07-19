@@ -26,6 +26,7 @@ var LikeButton = function (_React$Component) {
       var _this2 = this;
 
       if (this.state.liked) {
+
         return React.createElement(
           'button',
           { onClick: function onClick() {
@@ -53,8 +54,8 @@ ReactDOM.render(React.createElement(LikeButton, null), domContainer);
 
 function tick() {
   var element = React.createElement(
-    'a',
-    null,
+    'div',
+    { className: 'clock text-white' },
     new Date().toLocaleTimeString()
   );
   ReactDOM.render(element, document.getElementById('clock'));

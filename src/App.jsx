@@ -1,5 +1,7 @@
 'use strict';
 
+//  import './like_button.js';
+
 // function Nav_Menu_Item({Menu_Item_Name, BootstrapClass="text-white-50", LastClicked="Start"}){
 
 // return (<li onClick={itemclick} className={'navbar-brand' + ' '+ BootstrapClass} >{Menu_Item_Name}</li>);
@@ -110,7 +112,7 @@ class Content extends React.Component {
                                 </a>
 
                             </div>
-                            <div className="lead mr-5">
+                            <div className="lead p-3 mr-5">
                                 <span><i><q>Nawet z pozoru najdziwaczniejsza, najskromniejsza pasja jest czymś
                                 bardzo, ale to bardzo cennym. </q>
                                 </i><br /><span className="blockquote"><b><cite>- Stephen King </cite></b></span> </span>
@@ -136,15 +138,17 @@ class Content extends React.Component {
                                 backgroundSize: "cover"
                             }}>
 
-                                <div className="container text-white py-4">
+                                <div className="container text-white">
                                     <div className="row">
-                                        <h2 className="mx-auto mb-5">Projekty
+                                        <h2 className="mx-auto ">Projekty
                                             </h2>
 
-                                        <div id="like_button_container"></div>
-
+                                        
+                                   
                                     </div>
-
+                                    <div className=" ">
+                                    <LikeButton />
+                                        </div>
 
 
                                     <div className="hexagony">
@@ -159,7 +163,7 @@ class Content extends React.Component {
 
                                         </article>
                                         <article className="article2">
-                                            <figure><a href='https://github.com/AndrzejKobuszewski/NT4.git' style={{ textDecoration: "none", color: "white" }}>
+                                            <figure><a href='https://github.com/AndrzejKobuszewski/NT4.git' target="blanc" style={{ textDecoration: "none", color: "white" }}>
                                                 <h2>Napędzamy Polskę 4.0</h2>
                                                 <p>Projekt strony inicjatywy, której celem jest wprowadzenie zarządzania mobilnością
                                     w Polsce.</p>
@@ -181,6 +185,7 @@ class Content extends React.Component {
                                                 </a>
                                             </figure>
                                             <img alt src='./img/logo-elementor.png' />
+
                                         </article>
                                         <article className="article4">
                                             <figure>
@@ -204,12 +209,12 @@ class Content extends React.Component {
                                             </figure>
                                             <img alt src='./img/DevOps-logo.png' />
                                         </article>
-
+                                        
                                     </div>
 
                                 </div>
                                 <div>
-                                    <p id="OpisProjektowTabela" className="text-white-50">Poniższa tabela stanowi wykaz moich projektów zrealizowanych
+                                    <p id="OpisProjektowTabela" style={{backgroundColor:"grey"}} className="text-white">Poniższa tabela stanowi wykaz moich projektów zrealizowanych
                                     w ostatnich latach. Projektom zostały nadane nazwy robocze wraz z podaniem
                                     nazw wykorzystanych technologii. W tabeli znajdują
                                     się odnośniki do repozytariów na github lub do opublikowanych witryn.</p>
@@ -260,7 +265,7 @@ class Content extends React.Component {
                                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRre2hbPNrjdZNQgXjRmf3sTv6R9oCYxUawL39KAx5PJX4DS6gW" alt="mailing" title="mailing" height="40px" />
                                                     <img src="./img/rss.png" alt="rss logo" title="rss logo" height="40px" />
 
-/
+
 
                                             </td>
                                                 <td><button type="button" className="btn btn-primary" data-toggle="collapse" data-target="#opisNT">Opis Projektu</button></td>
@@ -405,10 +410,10 @@ class Content extends React.Component {
                 case 'Umiejętności':
                     return (
                         <section id="capabilities">
-                        <div className="jumbotron-fluid container container-fluid my-5" >
+                        <div className="jumbotron-fluid container container-fluid my-3" >
                                
                                 <div className="row">
-                                <h2 className="mx-auto mb-5">Umiejętności</h2>
+                                <h2 className="mx-auto mb-1">Umiejętności</h2>
                                 </div>
                                <div className="row">
                                 <div className="col-sm-4">
@@ -618,3 +623,49 @@ class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.querySelector('#App'));
+
+
+
+
+class LikeButton extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { liked: false };
+    }
+  
+    render() {
+      if (this.state.liked) {
+          
+        return (<button className="btn btn-success" style={{float:"left"}} onClick={() => this.setState({ liked: false }) }>
+        Polubiłeś to :-)
+      </button>);
+      }
+  
+      return (
+        <button  className="btn btn-info" style={{float:"left"}} onClick={() => this.setState({ liked: true }) }>
+          Lubię To
+        </button>
+      );
+    }
+  }
+
+
+  
+  
+  
+  
+  function tick() {
+      const element = (
+        
+  
+              <div className='clock text-white'> 
+                                    
+                  {new Date().toLocaleTimeString()}
+                  </div>
+       
+      );
+      ReactDOM.render(element, document.getElementById('clock'));}
+    
+setInterval(tick, 1000);
+    
+    

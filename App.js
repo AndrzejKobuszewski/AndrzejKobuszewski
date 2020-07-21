@@ -1,5 +1,7 @@
 'use strict';
 
+//  import './like_button.js';
+
 // function Nav_Menu_Item({Menu_Item_Name, BootstrapClass="text-white-50", LastClicked="Start"}){
 
 // return (<li onClick={itemclick} className={'navbar-brand' + ' '+ BootstrapClass} >{Menu_Item_Name}</li>);
@@ -212,7 +214,7 @@ var Content = function (_React$Component2) {
                             ),
                             React.createElement(
                                 'div',
-                                { className: 'lead mr-5' },
+                                { className: 'lead p-3 mr-5' },
                                 React.createElement(
                                     'span',
                                     null,
@@ -280,16 +282,20 @@ var Content = function (_React$Component2) {
                                     } },
                                 React.createElement(
                                     'div',
-                                    { className: 'container text-white py-4' },
+                                    { className: 'container text-white' },
                                     React.createElement(
                                         'div',
                                         { className: 'row' },
                                         React.createElement(
                                             'h2',
-                                            { className: 'mx-auto mb-5' },
+                                            { className: 'mx-auto ' },
                                             'Projekty'
-                                        ),
-                                        React.createElement('div', { id: 'like_button_container' })
+                                        )
+                                    ),
+                                    React.createElement(
+                                        'div',
+                                        { className: ' ' },
+                                        React.createElement(LikeButton, null)
                                     ),
                                     React.createElement(
                                         'div',
@@ -327,7 +333,7 @@ var Content = function (_React$Component2) {
                                                 null,
                                                 React.createElement(
                                                     'a',
-                                                    { href: 'https://github.com/AndrzejKobuszewski/NT4.git', style: { textDecoration: "none", color: "white" } },
+                                                    { href: 'https://github.com/AndrzejKobuszewski/NT4.git', target: 'blanc', style: { textDecoration: "none", color: "white" } },
                                                     React.createElement(
                                                         'h2',
                                                         null,
@@ -443,7 +449,7 @@ var Content = function (_React$Component2) {
                                     null,
                                     React.createElement(
                                         'p',
-                                        { id: 'OpisProjektowTabela', className: 'text-white-50' },
+                                        { id: 'OpisProjektowTabela', style: { backgroundColor: "grey" }, className: 'text-white' },
                                         'Poni\u017Csza tabela stanowi wykaz moich projekt\xF3w zrealizowanych w ostatnich latach. Projektom zosta\u0142y nadane nazwy robocze wraz z podaniem nazw wykorzystanych technologii. W tabeli znajduj\u0105 si\u0119 odno\u015Bniki do repozytari\xF3w na github lub do opublikowanych witryn.'
                                     ),
                                     React.createElement(
@@ -548,8 +554,7 @@ var Content = function (_React$Component2) {
                                                     React.createElement('img', { src: './img/wordpress-logo.png', alt: 'wordpress', title: 'wordpress', height: '40px' }),
                                                     React.createElement('img', { src: './img/ytApi.png', alt: 'youtubeapi', title: 'youtube api', height: '40px' }),
                                                     React.createElement('img', { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRre2hbPNrjdZNQgXjRmf3sTv6R9oCYxUawL39KAx5PJX4DS6gW', alt: 'mailing', title: 'mailing', height: '40px' }),
-                                                    React.createElement('img', { src: './img/rss.png', alt: 'rss logo', title: 'rss logo', height: '40px' }),
-                                                    '/'
+                                                    React.createElement('img', { src: './img/rss.png', alt: 'rss logo', title: 'rss logo', height: '40px' })
                                                 ),
                                                 React.createElement(
                                                     'td',
@@ -801,13 +806,13 @@ var Content = function (_React$Component2) {
                             { id: 'capabilities' },
                             React.createElement(
                                 'div',
-                                { className: 'jumbotron-fluid container container-fluid my-5' },
+                                { className: 'jumbotron-fluid container container-fluid my-3' },
                                 React.createElement(
                                     'div',
                                     { className: 'row' },
                                     React.createElement(
                                         'h2',
-                                        { className: 'mx-auto mb-5' },
+                                        { className: 'mx-auto mb-1' },
                                         'Umiej\u0119tno\u015Bci'
                                     )
                                 ),
@@ -1287,3 +1292,55 @@ var App = function (_React$Component3) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(App, null), document.querySelector('#App'));
+
+var LikeButton = function (_React$Component4) {
+    _inherits(LikeButton, _React$Component4);
+
+    function LikeButton(props) {
+        _classCallCheck(this, LikeButton);
+
+        var _this4 = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
+
+        _this4.state = { liked: false };
+        return _this4;
+    }
+
+    _createClass(LikeButton, [{
+        key: 'render',
+        value: function render() {
+            var _this5 = this;
+
+            if (this.state.liked) {
+
+                return React.createElement(
+                    'button',
+                    { className: 'btn btn-success', style: { float: "left" }, onClick: function onClick() {
+                            return _this5.setState({ liked: false });
+                        } },
+                    'Polubi\u0142e\u015B to :-)'
+                );
+            }
+
+            return React.createElement(
+                'button',
+                { className: 'btn btn-info', style: { float: "left" }, onClick: function onClick() {
+                        return _this5.setState({ liked: true });
+                    } },
+                'Lubi\u0119 To'
+            );
+        }
+    }]);
+
+    return LikeButton;
+}(React.Component);
+
+function tick() {
+    var element = React.createElement(
+        'div',
+        { className: 'clock text-white' },
+        new Date().toLocaleTimeString()
+    );
+    ReactDOM.render(element, document.getElementById('clock'));
+}
+
+setInterval(tick, 1000);

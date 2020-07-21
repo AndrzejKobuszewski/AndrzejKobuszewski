@@ -150,6 +150,11 @@ var Nav_React = function (_React$Component3) {
                 React.createElement(
                     'div',
                     { className: 'collapse navbar-collapse', id: 'collapsibleNavbar' },
+                    React.createElement(
+                        'h1',
+                        null,
+                        'Psi .'
+                    ),
                     React.createElement(Nav_Menu, { LastClicked: 'Start' })
                 ),
                 React.createElement('div', { className: 'clock nav-item nav-link', id: 'clock' })

@@ -87,7 +87,7 @@ class Nav_Menu extends React.Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>                                          
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
-                    
+                    <h1>Psi .</h1>
                         {<Nav_Menu LastClicked = 'Start'/>} 
                                            
                                                

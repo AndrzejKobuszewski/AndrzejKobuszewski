@@ -1,16 +1,5 @@
 'use strict';
 
-//  import './like_button.js';
-
-// function Nav_Menu_Item({Menu_Item_Name, BootstrapClass="text-white-50", LastClicked="Start"}){
-
-// return (<li onClick={itemclick} className={'navbar-brand' + ' '+ BootstrapClass} >{Menu_Item_Name}</li>);
-//     function itemclick(){
-//     LastClicked=Menu_Item_Name;
-//     console.log(LastClicked);
-//     return LastClicked;
-//     }
-// }
 
 class Nav_Menu extends React.Component {
     constructor(props) {
@@ -68,11 +57,155 @@ class Nav_Menu extends React.Component {
         }
     }
 }
+class Oferta extends React.Component{
+        constructor(props){
+            super(props)
+            this.state= {total:0, Mwh :0, Mwd:0, inputValue: 0, inputValue1: 0}
+               
+        console.log(isNaN(this.total));
+    }
+        
+       clickAddMWh=()=>{this.setState({Mwh: this.inputValue, total: this.inputValue1*200+this.inputValue*30});  console.log(this.Mwh)}
+       clickAddMWd=()=>{this.setState({Mwd: this.inputValue1, total: this.inputValue1*200+this.inputValue*30}); console.log(this.Mwd)}
+       ClearOrder=()=>{this.setState({Mwh: 0, Mwd: 0, total: 0});}
+       OnChangeInput=(e)=>{this.inputValue= e.target.value; console.log(e.target.value); console.log(this.inputValue)}
+       OnChangeInput1=(e)=>{this.inputValue1= e.target.value; console.log(e.target.value); console.log(this.inputValue1)} 
+
+        render(){
+        return(
+            <section id="Oferta">  
+            <div>
+                    <h1 style={{whiteSpace: "nowrap", overflow: "hidden"}}>          Oferta <span className="badge badge-success">NOWOŚĆ   </span>   
+                           Oferta <span className="badge badge-success">NOWOŚĆ   </span>        
+                             Oferta <span className="badge badge-success">NOWOŚĆ    </span>     
+                                  Oferta <span className="badge badge-success">NOWOŚĆ    </span>    
+                                        Oferta <span className="badge badge-success">NOWOŚĆ    </span>     
+                                             Oferta <span className="badge badge-success">NOWOŚĆ   </span>    
+                                                   Oferta <span className="badge badge-success">NOWOŚĆ   </span></h1>
+                    
+            </div>
+            <div className="jumbotron-fluid container container-fluid my-4" >
+                    <div className="row"> 
+                            <div className="col-sm-3">
+                                    <div className="card promo1" style={{width: "18rem"}}>
+                                            
+                                            <div className="mt-2 mx-5">
+                                            <img src="./img/wall-clock.svg" className="card-img-top" style={{height:" 10vw"}} alt="1 godzina"/>
+                                            </div>
+                                            <div className="card-body">
+                                              <h5 className="card-title">Jedna roboczogodzina mojej pracy nad Twoim projektem</h5>
+                                              <p className="card-text"></p>
+                                            <form>
+                                              <div className="form-group">
+                                                    <label for="exampleInputEmail1">Liczba roboczogodzin:</label>
+                                                    <input type="number" className="form-control" onChange={this.OnChangeInput} placeholder="1"/>
+                                                    <small id="emailHelp" className="form-text text-muted">Wpisz liczbę roboczogodzin</small>
+                                                    <button  onClick= {this.clickAddMWh} type="button" className=" btn btn-info my-1" >Dodaj do koszyka</button>
+                                                    {/* <small id="emailHelp" className="form-text text-muted">Pay Pal</small>
+                                                    <button type="button"className=" btn btn-success">KUP TERAZ </button> */}
+                                            </div>
+                                            </form>
+                                            </div>
+                                    </div>
+                            
+                            </div>
+                            <div className="col-sm-3">
+                                    <div className="card promo2" style={{width: "18rem"}}>
+                                            
+                                            <div className="mt-2 mx-5">
+                                            <img src="./img/schedule.svg" className="card-img-top" style={{height:"10vw"}} alt="1 dzień"/>
+                                            </div>
+                                            <div className="card-body">
+                                              <h5 className="card-title">Jeden cały dzień roboczy mojej pracy nad Twoim projektem </h5>
+                                              <p className="card-text"></p>
+                                            <form>
+                                              <div className="form-group">
+                                                    <label for="exampleInputEmail1">Liczba dni roboczych:</label>
+                                                    <input type="number" onChange={this.OnChangeInput1} className="form-control" placeholder="1"/>
+                                                    <small id="emailHelp" className="form-text text-muted">Wpisz liczbę dni roboczych</small>
+                                                    <button onClick= {this.clickAddMWd}type="button" className=" btn btn-info my-1" >Dodaj do koszyka</button>
+                                                    {/* <small id="emailHelp" className="form-text text-muted">Pay Pal</small>
+                                                    <button type="button"className=" btn btn-success">KUP TERAZ </button> */}
+                                                                                                    
+                                                    
+                                            </div>
+                                            </form>
+                                            </div>
+                                    </div>
+                            
+                            </div>
+                            <div className="col-sm-3">
+                                    <div className="card " style={{width: "18rem"}}>
+                                           
+                                            <div className="mt-2 mx-5">
+                                            <img src="./img/WholeOrder.svg" className="card-img-top" style={{height: "10vw"}} alt="zlecenie"/>
+                                            </div>
+                                            <div className="card-body">
+                                              <h5 className="card-title">Zlecenie</h5>
+                                              <p className="card-text"> Możesz złożyć całe zlecenie lub powierzyć fragmenty swojego projektu do kompleksowej realizacji. 
+                                              <br/> Sprawdź jak się ze mną pracuje - przyślij mi zadanie sprawdzające.
+                                              </p>
+                                              <button type="button" className=" btn btn-success my-1" data-toggle="modal" data-target="#exampleModal" >Kontakt</button>
+                                            </div>
+                                    </div>
+                            
+                            </div>
+                            <div className="col-sm-3">
+                                    <div className="card" style={{width: "18rem"}}>
+                                        
+                                            <div className="mt-2 mx-5 mb-1">
+                                            <img src="./img/shopping-cart.svg" className="card-img-top" style={{height:"10vw"}} alt="koszyk"/>
+                                            </div>
+                                            <div className="card-body">
+                                              <h5 className="card-title">Koszyk </h5>
+                                              <p className="card-text" >
+                                                    Razem do zapłaty: {this.state.total + ' zł'}
+
+                                              </p>
+                                              <p className="card-text" alt="Man-working-days" title="Man-working-days">
+                                                    Liczba dni roboczych: {this.state.Mwd + ' Mwd'}
+
+                                              </p>
+                                              <p className="card-text" alt="Man-working-hours" title="Man-working-hours">
+                                                    Liczba godzin roboczych: {this.state.Mwh + ' Mwh'}
+
+                                              </p>
+                                            <form>
+                                              <div className="form-group">
+                                                    
+                                                    <small id="emailHelp" className="form-text text-muted">Zacznij zakupy od początku</small>
+                                                    <button onClick={this.ClearOrder} type="button" className="btn btn-info my-1" >Opróżnij koszyk</button>
+                                                    {/* <small id="emailHelp" className="form-text text-muted mt-2">Pay Pal</small>
+                                                   
+                                                    <button type="button"className=" btn btn-success mb-1">KUP TERAZ </button> */}
+                                                    
+                                                    <div id="paypal-button-container"></div> 
+                                                    
+                                                    {/* {paypal.Buttons().render('#paypal-button-container')}                                       */}
+                                                   
+                                                  
+                                            </div>
+                                               
+                                            </form>
+                                          
+                                            </div>
+                                           
+                                    </div>
+                            
+                            </div>
+                    </div>
+                    <div className="row"></div>
+            </div>                        
+    </section>    
+        );
+        }
+    }
 
 class Content extends React.Component {
     constructor(props) {
         super(props)
     }
+    
     render() {
         var { active } = this.props;
         try {
@@ -118,7 +251,7 @@ class Content extends React.Component {
                                 </i><br /><span className="blockquote"><b><cite>- Stephen King </cite></b></span> </span>
                                 <div>
                                     <button type="button" className=" btn btn-success" data-toggle="modal" data-target="#exampleModal" >Kontakt</button>
-                                    <button type="button" className=" btn btn-info"><a href="#projekty" style={{ textdecoration: "none", color: "cornsilk" }}>Projekty</a></button>
+                                    <button onClick={this.props.itemclick} type="button" className=" btn btn-info">Projekty</button>
                                 </div>
                             </div>
 
@@ -455,121 +588,7 @@ class Content extends React.Component {
                         );
                     break;
                 case 'Oferta':
-                    return (
-
-                        <section id="Oferta">  
-                        <div>
-                                <h1 style={{whiteSpace: "nowrap", overflow: "hidden"}}>          Oferta <span className="badge badge-success">NOWOŚĆ   </span>   
-                                       Oferta <span className="badge badge-success">NOWOŚĆ   </span>        
-                                         Oferta <span className="badge badge-success">NOWOŚĆ    </span>     
-                                              Oferta <span className="badge badge-success">NOWOŚĆ    </span>    
-                                                    Oferta <span className="badge badge-success">NOWOŚĆ    </span>     
-                                                         Oferta <span className="badge badge-success">NOWOŚĆ   </span>    
-                                                               Oferta <span className="badge badge-success">NOWOŚĆ   </span></h1>
-                                
-                        </div>
-                        <div className="jumbotron-fluid container container-fluid my-4" >
-                                <div className="row"> 
-                                        <div className="col-sm-3">
-                                                <div className="card promo1" style={{width: "18rem"}}>
-                                                        
-                                                        <div className="mt-2 mx-5">
-                                                        <img src="./img/wall-clock.svg" className="card-img-top" style={{height:" 10vw"}} alt="1 godzina"/>
-                                                        </div>
-                                                        <div className="card-body">
-                                                          <h5 className="card-title">Jedna roboczogodzina mojej pracy nad Twoim projektem</h5>
-                                                          <p className="card-text"></p>
-                                                        <form>
-                                                          <div className="form-group">
-                                                                <label for="exampleInputEmail1">Liczba roboczogodzin:</label>
-                                                                <input type="number" className="form-control" placeholder="1"/>
-                                                                <small id="emailHelp" className="form-text text-muted">Wpisz liczbę roboczogodzin</small>
-                                                                <button type="button" className=" btn btn-info my-1" >Dodaj do koszyka</button>
-                                                                <small id="emailHelp" className="form-text text-muted">Pay Pal</small>
-                                                                <button type="button"className=" btn btn-success">KUP TERAZ </button>
-                                                        </div>
-                                                        </form>
-                                                        </div>
-                                                </div>
-                                        
-                                        </div>
-                                        <div className="col-sm-3">
-                                                <div className="card promo2" style={{width: "18rem"}}>
-                                                        
-                                                        <div className="mt-2 mx-5">
-                                                        <img src="./img/schedule.svg" className="card-img-top" style={{height:"10vw"}} alt="1 dzień"/>
-                                                        </div>
-                                                        <div className="card-body">
-                                                          <h5 className="card-title">Jeden cały dzień roboczy mojej pracy nad Twoim projektem </h5>
-                                                          <p className="card-text"></p>
-                                                        <form>
-                                                          <div className="form-group">
-                                                                <label for="exampleInputEmail1">Liczba dni roboczych:</label>
-                                                                <input type="number" className="form-control" placeholder="1"/>
-                                                                <small id="emailHelp" className="form-text text-muted">Wpisz liczbę dni roboczych</small>
-                                                                <button type="button" className=" btn btn-info my-1" >Dodaj do koszyka</button>
-                                                                <small id="emailHelp" className="form-text text-muted">Pay Pal</small>
-                                                                <button type="button"className=" btn btn-success">KUP TERAZ </button>
-                                                        </div>
-                                                        </form>
-                                                        </div>
-                                                </div>
-                                        
-                                        </div>
-                                        <div className="col-sm-3">
-                                                <div className="card " style={{width: "18rem"}}>
-                                                       
-                                                        <div className="mt-2 mx-5">
-                                                        <img src="./img/WholeOrder.svg" className="card-img-top" style={{height: "10vw"}} alt="zlecenie"/>
-                                                        </div>
-                                                        <div className="card-body">
-                                                          <h5 className="card-title">Zlecenie</h5>
-                                                          <p className="card-text"> Możesz złożyć całe zlecenie lub powierzyć fragmenty swojego projektu do kompleksowej realizacji. 
-                                                          <br/> Możesz sprawdzić jak się ze mną pracuje - przyślij mi zadanie sprawdzające - to takie proste i nic Cię nie kosztuje.
-                                                          </p>
-                                                          <button type="button" className=" btn btn-success my-2 mb-3" data-toggle="modal" data-target="#exampleModal" >Kontakt</button>
-                                                        </div>
-                                                </div>
-                                        
-                                        </div>
-                                        <div className="col-sm-3">
-                                                <div className="card" style={{width: "18rem"}}>
-                                                    
-                                                        <div className="mt-2 mx-5 mb-1">
-                                                        <img src="./img/shopping-cart.svg" className="card-img-top" style={{height:"10vw"}} alt="koszyk"/>
-                                                        </div>
-                                                        <div className="card-body">
-                                                          <h5 className="card-title">Koszyk </h5>
-                                                          <p className="card-text">
-                                                                Razem do zapłaty:
-
-                                                          </p>
-                                                          <p className="card-text">
-                                                                Liczba dni roboczych:
-
-                                                          </p>
-                                                          <p className="card-text">
-                                                                Liczba godzin roboczych:
-
-                                                          </p>
-                                                        <form>
-                                                          <div className="form-group">
-                                                                
-                                                                <small id="emailHelp" className="form-text text-muted">Zacznij zakupy od początku</small>
-                                                                <button type="button" className=" btn btn-info my-1" >Opróżnij koszyk</button>
-                                                                <small id="emailHelp" className="form-text text-muted mt-2">Pay Pal</small>
-                                                               
-                                                                <button type="button"className=" btn btn-success mb-1">KUP TERAZ </button>
-                                                        </div>
-                                                        </form>
-                                                        </div>
-                                                </div>
-                                        
-                                        </div>
-                                </div>
-                                <div className="row"></div>
-                        </div>                        
-                </section>    
+                    return (<Oferta />                        
                     );
                     break;
                 default:
@@ -579,6 +598,7 @@ class Content extends React.Component {
         catch (error) {
             console.log("Wystąpił błąd");
         }
+       
     }
 }
 
@@ -618,7 +638,7 @@ class App extends React.Component {
                         </div>
                     </nav>
                 </header>
-                {<Content active={this.state.active} />}
+                {<Content active={this.state.active} itemclick={this.itemclick} />}
             </main>);
     }
 }

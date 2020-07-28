@@ -1,17 +1,5 @@
 'use strict';
 
-//  import './like_button.js';
-
-// function Nav_Menu_Item({Menu_Item_Name, BootstrapClass="text-white-50", LastClicked="Start"}){
-
-// return (<li onClick={itemclick} className={'navbar-brand' + ' '+ BootstrapClass} >{Menu_Item_Name}</li>);
-//     function itemclick(){
-//     LastClicked=Menu_Item_Name;
-//     console.log(LastClicked);
-//     return LastClicked;
-//     }
-// }
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -157,8 +145,301 @@ var Nav_Menu = function (_React$Component) {
     return Nav_Menu;
 }(React.Component);
 
-var Content = function (_React$Component2) {
-    _inherits(Content, _React$Component2);
+var Oferta = function (_React$Component2) {
+    _inherits(Oferta, _React$Component2);
+
+    function Oferta(props) {
+        _classCallCheck(this, Oferta);
+
+        var _this2 = _possibleConstructorReturn(this, (Oferta.__proto__ || Object.getPrototypeOf(Oferta)).call(this, props));
+
+        _this2.clickAddMWh = function () {
+            _this2.setState({ Mwh: _this2.inputValue, total: _this2.inputValue1 * 200 + _this2.inputValue * 30 });console.log(_this2.Mwh);
+        };
+
+        _this2.clickAddMWd = function () {
+            _this2.setState({ Mwd: _this2.inputValue1, total: _this2.inputValue1 * 200 + _this2.inputValue * 30 });console.log(_this2.Mwd);
+        };
+
+        _this2.ClearOrder = function () {
+            _this2.setState({ Mwh: 0, Mwd: 0, total: 0 });
+        };
+
+        _this2.OnChangeInput = function (e) {
+            _this2.inputValue = e.target.value;console.log(e.target.value);console.log(_this2.inputValue);
+        };
+
+        _this2.OnChangeInput1 = function (e) {
+            _this2.inputValue1 = e.target.value;console.log(e.target.value);console.log(_this2.inputValue1);
+        };
+
+        _this2.state = { total: 0, Mwh: 0, Mwd: 0, inputValue: 0, inputValue1: 0 };
+
+        console.log(isNaN(_this2.total));
+        return _this2;
+    }
+
+    _createClass(Oferta, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'section',
+                { id: 'Oferta' },
+                React.createElement(
+                    'div',
+                    null,
+                    React.createElement(
+                        'h1',
+                        { style: { whiteSpace: "nowrap", overflow: "hidden" } },
+                        '          Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106   '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106   '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106    '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106    '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106    '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106   '
+                        ),
+                        'Oferta ',
+                        React.createElement(
+                            'span',
+                            { className: 'badge badge-success' },
+                            'NOWO\u015A\u0106   '
+                        )
+                    )
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'jumbotron-fluid container container-fluid my-4' },
+                    React.createElement(
+                        'div',
+                        { className: 'row' },
+                        React.createElement(
+                            'div',
+                            { className: 'col-sm-3' },
+                            React.createElement(
+                                'div',
+                                { className: 'card promo1', style: { width: "18rem" } },
+                                React.createElement(
+                                    'div',
+                                    { className: 'mt-2 mx-5' },
+                                    React.createElement('img', { src: './img/wall-clock.svg', className: 'card-img-top', style: { height: " 10vw" }, alt: '1 godzina' })
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'card-body' },
+                                    React.createElement(
+                                        'h5',
+                                        { className: 'card-title' },
+                                        'Jedna roboczogodzina mojej pracy nad Twoim projektem'
+                                    ),
+                                    React.createElement('p', { className: 'card-text' }),
+                                    React.createElement(
+                                        'form',
+                                        null,
+                                        React.createElement(
+                                            'div',
+                                            { className: 'form-group' },
+                                            React.createElement(
+                                                'label',
+                                                { 'for': 'exampleInputEmail1' },
+                                                'Liczba roboczogodzin:'
+                                            ),
+                                            React.createElement('input', { type: 'number', className: 'form-control', onChange: this.OnChangeInput, placeholder: '1' }),
+                                            React.createElement(
+                                                'small',
+                                                { id: 'emailHelp', className: 'form-text text-muted' },
+                                                'Wpisz liczb\u0119 roboczogodzin'
+                                            ),
+                                            React.createElement(
+                                                'button',
+                                                { onClick: this.clickAddMWh, type: 'button', className: ' btn btn-info my-1' },
+                                                'Dodaj do koszyka'
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        React.createElement(
+                            'div',
+                            { className: 'col-sm-3' },
+                            React.createElement(
+                                'div',
+                                { className: 'card promo2', style: { width: "18rem" } },
+                                React.createElement(
+                                    'div',
+                                    { className: 'mt-2 mx-5' },
+                                    React.createElement('img', { src: './img/schedule.svg', className: 'card-img-top', style: { height: "10vw" }, alt: '1 dzie\u0144' })
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'card-body' },
+                                    React.createElement(
+                                        'h5',
+                                        { className: 'card-title' },
+                                        'Jeden ca\u0142y dzie\u0144 roboczy mojej pracy nad Twoim projektem '
+                                    ),
+                                    React.createElement('p', { className: 'card-text' }),
+                                    React.createElement(
+                                        'form',
+                                        null,
+                                        React.createElement(
+                                            'div',
+                                            { className: 'form-group' },
+                                            React.createElement(
+                                                'label',
+                                                { 'for': 'exampleInputEmail1' },
+                                                'Liczba dni roboczych:'
+                                            ),
+                                            React.createElement('input', { type: 'number', onChange: this.OnChangeInput1, className: 'form-control', placeholder: '1' }),
+                                            React.createElement(
+                                                'small',
+                                                { id: 'emailHelp', className: 'form-text text-muted' },
+                                                'Wpisz liczb\u0119 dni roboczych'
+                                            ),
+                                            React.createElement(
+                                                'button',
+                                                { onClick: this.clickAddMWd, type: 'button', className: ' btn btn-info my-1' },
+                                                'Dodaj do koszyka'
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        React.createElement(
+                            'div',
+                            { className: 'col-sm-3' },
+                            React.createElement(
+                                'div',
+                                { className: 'card ', style: { width: "18rem" } },
+                                React.createElement(
+                                    'div',
+                                    { className: 'mt-2 mx-5' },
+                                    React.createElement('img', { src: './img/WholeOrder.svg', className: 'card-img-top', style: { height: "10vw" }, alt: 'zlecenie' })
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'card-body' },
+                                    React.createElement(
+                                        'h5',
+                                        { className: 'card-title' },
+                                        'Zlecenie'
+                                    ),
+                                    React.createElement(
+                                        'p',
+                                        { className: 'card-text' },
+                                        ' Mo\u017Cesz z\u0142o\u017Cy\u0107 ca\u0142e zlecenie lub powierzy\u0107 fragmenty swojego projektu do kompleksowej realizacji.',
+                                        React.createElement('br', null),
+                                        ' Sprawd\u017A jak si\u0119 ze mn\u0105 pracuje - przy\u015Blij mi zadanie sprawdzaj\u0105ce.'
+                                    ),
+                                    React.createElement(
+                                        'button',
+                                        { type: 'button', className: ' btn btn-success my-1', 'data-toggle': 'modal', 'data-target': '#exampleModal' },
+                                        'Kontakt'
+                                    )
+                                )
+                            )
+                        ),
+                        React.createElement(
+                            'div',
+                            { className: 'col-sm-3' },
+                            React.createElement(
+                                'div',
+                                { className: 'card', style: { width: "18rem" } },
+                                React.createElement(
+                                    'div',
+                                    { className: 'mt-2 mx-5 mb-1' },
+                                    React.createElement('img', { src: './img/shopping-cart.svg', className: 'card-img-top', style: { height: "10vw" }, alt: 'koszyk' })
+                                ),
+                                React.createElement(
+                                    'div',
+                                    { className: 'card-body' },
+                                    React.createElement(
+                                        'h5',
+                                        { className: 'card-title' },
+                                        'Koszyk '
+                                    ),
+                                    React.createElement(
+                                        'p',
+                                        { className: 'card-text' },
+                                        'Razem do zap\u0142aty: ',
+                                        this.state.total + ' zł'
+                                    ),
+                                    React.createElement(
+                                        'p',
+                                        { className: 'card-text', alt: 'Man-working-days', title: 'Man-working-days' },
+                                        'Liczba dni roboczych: ',
+                                        this.state.Mwd + ' Mwd'
+                                    ),
+                                    React.createElement(
+                                        'p',
+                                        { className: 'card-text', alt: 'Man-working-hours', title: 'Man-working-hours' },
+                                        'Liczba godzin roboczych: ',
+                                        this.state.Mwh + ' Mwh'
+                                    ),
+                                    React.createElement(
+                                        'form',
+                                        null,
+                                        React.createElement(
+                                            'div',
+                                            { className: 'form-group' },
+                                            React.createElement(
+                                                'small',
+                                                { id: 'emailHelp', className: 'form-text text-muted' },
+                                                'Zacznij zakupy od pocz\u0105tku'
+                                            ),
+                                            React.createElement(
+                                                'button',
+                                                { onClick: this.ClearOrder, type: 'button', className: 'btn btn-info my-1' },
+                                                'Opr\xF3\u017Cnij koszyk'
+                                            ),
+                                            React.createElement('div', { id: 'paypal-button-container' })
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    React.createElement('div', { className: 'row' })
+                )
+            );
+        }
+    }]);
+
+    return Oferta;
+}(React.Component);
+
+var Content = function (_React$Component3) {
+    _inherits(Content, _React$Component3);
 
     function Content(props) {
         _classCallCheck(this, Content);
@@ -253,12 +534,8 @@ var Content = function (_React$Component2) {
                                     ),
                                     React.createElement(
                                         'button',
-                                        { type: 'button', className: ' btn btn-info' },
-                                        React.createElement(
-                                            'a',
-                                            { href: '#projekty', style: { textdecoration: "none", color: "cornsilk" } },
-                                            'Projekty'
-                                        )
+                                        { onClick: this.props.itemclick, type: 'button', className: ' btn btn-info' },
+                                        'Projekty'
                                     )
                                 )
                             )
@@ -943,282 +1220,7 @@ var Content = function (_React$Component2) {
                         );
                         break;
                     case 'Oferta':
-                        return React.createElement(
-                            'section',
-                            { id: 'Oferta' },
-                            React.createElement(
-                                'div',
-                                null,
-                                React.createElement(
-                                    'h1',
-                                    { style: { whiteSpace: "nowrap", overflow: "hidden" } },
-                                    '          Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106   '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106   '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106    '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106    '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106    '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106   '
-                                    ),
-                                    'Oferta ',
-                                    React.createElement(
-                                        'span',
-                                        { className: 'badge badge-success' },
-                                        'NOWO\u015A\u0106   '
-                                    )
-                                )
-                            ),
-                            React.createElement(
-                                'div',
-                                { className: 'jumbotron-fluid container container-fluid my-4' },
-                                React.createElement(
-                                    'div',
-                                    { className: 'row' },
-                                    React.createElement(
-                                        'div',
-                                        { className: 'col-sm-3' },
-                                        React.createElement(
-                                            'div',
-                                            { className: 'card promo1', style: { width: "18rem" } },
-                                            React.createElement(
-                                                'div',
-                                                { className: 'mt-2 mx-5' },
-                                                React.createElement('img', { src: './img/wall-clock.svg', className: 'card-img-top', style: { height: " 10vw" }, alt: '1 godzina' })
-                                            ),
-                                            React.createElement(
-                                                'div',
-                                                { className: 'card-body' },
-                                                React.createElement(
-                                                    'h5',
-                                                    { className: 'card-title' },
-                                                    'Jedna roboczogodzina mojej pracy nad Twoim projektem'
-                                                ),
-                                                React.createElement('p', { className: 'card-text' }),
-                                                React.createElement(
-                                                    'form',
-                                                    null,
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'form-group' },
-                                                        React.createElement(
-                                                            'label',
-                                                            { 'for': 'exampleInputEmail1' },
-                                                            'Liczba roboczogodzin:'
-                                                        ),
-                                                        React.createElement('input', { type: 'number', className: 'form-control', placeholder: '1' }),
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted' },
-                                                            'Wpisz liczb\u0119 roboczogodzin'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-info my-1' },
-                                                            'Dodaj do koszyka'
-                                                        ),
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted' },
-                                                            'Pay Pal'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-success' },
-                                                            'KUP TERAZ '
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    ),
-                                    React.createElement(
-                                        'div',
-                                        { className: 'col-sm-3' },
-                                        React.createElement(
-                                            'div',
-                                            { className: 'card promo2', style: { width: "18rem" } },
-                                            React.createElement(
-                                                'div',
-                                                { className: 'mt-2 mx-5' },
-                                                React.createElement('img', { src: './img/schedule.svg', className: 'card-img-top', style: { height: "10vw" }, alt: '1 dzie\u0144' })
-                                            ),
-                                            React.createElement(
-                                                'div',
-                                                { className: 'card-body' },
-                                                React.createElement(
-                                                    'h5',
-                                                    { className: 'card-title' },
-                                                    'Jeden ca\u0142y dzie\u0144 roboczy mojej pracy nad Twoim projektem '
-                                                ),
-                                                React.createElement('p', { className: 'card-text' }),
-                                                React.createElement(
-                                                    'form',
-                                                    null,
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'form-group' },
-                                                        React.createElement(
-                                                            'label',
-                                                            { 'for': 'exampleInputEmail1' },
-                                                            'Liczba dni roboczych:'
-                                                        ),
-                                                        React.createElement('input', { type: 'number', className: 'form-control', placeholder: '1' }),
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted' },
-                                                            'Wpisz liczb\u0119 dni roboczych'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-info my-1' },
-                                                            'Dodaj do koszyka'
-                                                        ),
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted' },
-                                                            'Pay Pal'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-success' },
-                                                            'KUP TERAZ '
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    ),
-                                    React.createElement(
-                                        'div',
-                                        { className: 'col-sm-3' },
-                                        React.createElement(
-                                            'div',
-                                            { className: 'card ', style: { width: "18rem" } },
-                                            React.createElement(
-                                                'div',
-                                                { className: 'mt-2 mx-5' },
-                                                React.createElement('img', { src: './img/WholeOrder.svg', className: 'card-img-top', style: { height: "10vw" }, alt: 'zlecenie' })
-                                            ),
-                                            React.createElement(
-                                                'div',
-                                                { className: 'card-body' },
-                                                React.createElement(
-                                                    'h5',
-                                                    { className: 'card-title' },
-                                                    'Zlecenie'
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    { className: 'card-text' },
-                                                    ' Mo\u017Cesz z\u0142o\u017Cy\u0107 ca\u0142e zlecenie lub powierzy\u0107 fragmenty swojego projektu do kompleksowej realizacji.',
-                                                    React.createElement('br', null),
-                                                    ' Mo\u017Cesz sprawdzi\u0107 jak si\u0119 ze mn\u0105 pracuje - przy\u015Blij mi zadanie sprawdzaj\u0105ce - to takie proste i nic Ci\u0119 nie kosztuje.'
-                                                ),
-                                                React.createElement(
-                                                    'button',
-                                                    { type: 'button', className: ' btn btn-success my-2 mb-3', 'data-toggle': 'modal', 'data-target': '#exampleModal' },
-                                                    'Kontakt'
-                                                )
-                                            )
-                                        )
-                                    ),
-                                    React.createElement(
-                                        'div',
-                                        { className: 'col-sm-3' },
-                                        React.createElement(
-                                            'div',
-                                            { className: 'card', style: { width: "18rem" } },
-                                            React.createElement(
-                                                'div',
-                                                { className: 'mt-2 mx-5 mb-1' },
-                                                React.createElement('img', { src: './img/shopping-cart.svg', className: 'card-img-top', style: { height: "10vw" }, alt: 'koszyk' })
-                                            ),
-                                            React.createElement(
-                                                'div',
-                                                { className: 'card-body' },
-                                                React.createElement(
-                                                    'h5',
-                                                    { className: 'card-title' },
-                                                    'Koszyk '
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    { className: 'card-text' },
-                                                    'Razem do zap\u0142aty:'
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    { className: 'card-text' },
-                                                    'Liczba dni roboczych:'
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    { className: 'card-text' },
-                                                    'Liczba godzin roboczych:'
-                                                ),
-                                                React.createElement(
-                                                    'form',
-                                                    null,
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'form-group' },
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted' },
-                                                            'Zacznij zakupy od pocz\u0105tku'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-info my-1' },
-                                                            'Opr\xF3\u017Cnij koszyk'
-                                                        ),
-                                                        React.createElement(
-                                                            'small',
-                                                            { id: 'emailHelp', className: 'form-text text-muted mt-2' },
-                                                            'Pay Pal'
-                                                        ),
-                                                        React.createElement(
-                                                            'button',
-                                                            { type: 'button', className: ' btn btn-success mb-1' },
-                                                            'KUP TERAZ '
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                React.createElement('div', { className: 'row' })
-                            )
-                        );
+                        return React.createElement(Oferta, null);
                         break;
                     default:
                         console.log("Mam nadzieję, że warto się uczyć Reacta");
@@ -1232,13 +1234,13 @@ var Content = function (_React$Component2) {
     return Content;
 }(React.Component);
 
-var App = function (_React$Component3) {
-    _inherits(App, _React$Component3);
+var App = function (_React$Component4) {
+    _inherits(App, _React$Component4);
 
     function App() {
         var _ref;
 
-        var _temp, _this3, _ret;
+        var _temp, _this4, _ret;
 
         _classCallCheck(this, App);
 
@@ -1246,15 +1248,15 @@ var App = function (_React$Component3) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this3 = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this3), _this3.state = { active: "Start" }, _this3.itemclick = function () {
-            _this3.setState({ active: "Projekty" });
-        }, _this3.startclick = function () {
-            _this3.setState({ active: "Start" });
-        }, _this3.umiejetnosciclick = function () {
-            _this3.setState({ active: "Umiejętności" });
-        }, _this3.ofertaclick = function () {
-            _this3.setState({ active: "Oferta" });
-        }, _temp), _possibleConstructorReturn(_this3, _ret);
+        return _ret = (_temp = (_this4 = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this4), _this4.state = { active: "Start" }, _this4.itemclick = function () {
+            _this4.setState({ active: "Projekty" });
+        }, _this4.startclick = function () {
+            _this4.setState({ active: "Start" });
+        }, _this4.umiejetnosciclick = function () {
+            _this4.setState({ active: "Umiejętności" });
+        }, _this4.ofertaclick = function () {
+            _this4.setState({ active: "Oferta" });
+        }, _temp), _possibleConstructorReturn(_this4, _ret);
     }
 
     _createClass(App, [{
@@ -1283,7 +1285,7 @@ var App = function (_React$Component3) {
                         React.createElement('div', { className: 'clock nav-item nav-link', id: 'clock' })
                     )
                 ),
-                React.createElement(Content, { active: this.state.active })
+                React.createElement(Content, { active: this.state.active, itemclick: this.itemclick })
             );
         }
     }]);
@@ -1293,29 +1295,29 @@ var App = function (_React$Component3) {
 
 ReactDOM.render(React.createElement(App, null), document.querySelector('#App'));
 
-var LikeButton = function (_React$Component4) {
-    _inherits(LikeButton, _React$Component4);
+var LikeButton = function (_React$Component5) {
+    _inherits(LikeButton, _React$Component5);
 
     function LikeButton(props) {
         _classCallCheck(this, LikeButton);
 
-        var _this4 = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
+        var _this5 = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
 
-        _this4.state = { liked: false };
-        return _this4;
+        _this5.state = { liked: false };
+        return _this5;
     }
 
     _createClass(LikeButton, [{
         key: 'render',
         value: function render() {
-            var _this5 = this;
+            var _this6 = this;
 
             if (this.state.liked) {
 
                 return React.createElement(
                     'button',
                     { className: 'btn btn-success', style: { float: "left" }, onClick: function onClick() {
-                            return _this5.setState({ liked: false });
+                            return _this6.setState({ liked: false });
                         } },
                     'Polubi\u0142e\u015B to :-)'
                 );
@@ -1324,7 +1326,7 @@ var LikeButton = function (_React$Component4) {
             return React.createElement(
                 'button',
                 { className: 'btn btn-info', style: { float: "left" }, onClick: function onClick() {
-                        return _this5.setState({ liked: true });
+                        return _this6.setState({ liked: true });
                     } },
                 'Lubi\u0119 To'
             );

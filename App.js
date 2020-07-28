@@ -1015,7 +1015,6 @@ var Content = function (_React$Component3) {
                                                 'tr',
                                                 { id: 'opisN', className: 'collapse' },
                                                 React.createElement('td', null),
-                                                '/',
                                                 React.createElement(
                                                     'td',
                                                     { colspan: '4' },

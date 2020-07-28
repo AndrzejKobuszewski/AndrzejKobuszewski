@@ -379,7 +379,7 @@ class Content extends React.Component {
                                                 <td></td>
                                                 <td colspan="4" >
                                                     Opis projektu "Kobuszewski.com":<br />
-                                            Strona powstała podczas pandemii COVID19 w celu praktycznego zapoznania się z frameworkiem Bootstrap 4 oraz React.
+                                            Strona powstała podczas pandemii COVID19 w celu praktycznego zapoznania się z frameworkiem Bootstrap 4 oraz biblioteką React.
 
                                             </td>
                                             </tr>
@@ -491,7 +491,7 @@ class Content extends React.Component {
                                                 <td>-------</td>
                                             </tr>
                                             <tr id="opisN" className="collapse">
-                                                <td></td>/
+                                                <td></td>
                                             <td colspan="4" >
                                                     Opis projektu "Sieć wewnętrzna":<br />
                                             Sieć wewnętrzna to codzienne czynności związane z administracją urządzeniami domowymi w tym serwerami

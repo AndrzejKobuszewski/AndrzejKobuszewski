@@ -200,7 +200,6 @@ class Oferta extends React.Component{
         );
         }
     }
-
 class Content extends React.Component {
     constructor(props) {
         super(props)
@@ -601,8 +600,6 @@ class Content extends React.Component {
        
     }
 }
-
-
 class App extends React.Component {
     state = { active: "Start" };
 
@@ -644,9 +641,6 @@ class App extends React.Component {
 }
 ReactDOM.render(<App />, document.querySelector('#App'));
 
-
-
-
 class LikeButton extends React.Component {
     constructor(props) {
       super(props);
@@ -668,11 +662,6 @@ class LikeButton extends React.Component {
       );
     }
   }
-
-
-  
-  
-  
   
   function tick() {
       const element = (

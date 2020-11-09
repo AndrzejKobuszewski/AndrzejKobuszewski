@@ -774,7 +774,7 @@ var Content = function (_React$Component3) {
                                                 React.createElement(
                                                     'td',
                                                     null,
-                                                    React.createElement('img', { src: 'https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png', alt: 'HTML', title: 'HTML', height: '40px' }),
+                                                    React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/html5.png', alt: 'HTML', title: 'HTML', height: '40px' }),
                                                     React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/css3.png', alt: 'css', title: 'css', height: '40px' }),
                                                     React.createElement('img', { src: 'https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png', alt: 'js', title: 'js', height: '40px' }),
                                                     React.createElement('img', { src: './img/bootstrap4.jpg', alt: 'bootstrap4', title: 'bootstrap4', height: '40px' }),
@@ -808,7 +808,7 @@ var Content = function (_React$Component3) {
                                                     { colspan: '4' },
                                                     'Opis projektu "Kobuszewski.com":',
                                                     React.createElement('br', null),
-                                                    'Strona powsta\u0142a podczas pandemii COVID19 w celu praktycznego zapoznania si\u0119 z frameworkiem Bootstrap 4 oraz React.'
+                                                    'Strona powsta\u0142a podczas pandemii COVID19 w celu praktycznego zapoznania si\u0119 z frameworkiem Bootstrap 4 oraz bibliotek\u0105 React.'
                                                 )
                                             ),
                                             React.createElement(
@@ -822,7 +822,7 @@ var Content = function (_React$Component3) {
                                                 React.createElement(
                                                     'td',
                                                     null,
-                                                    React.createElement('img', { src: 'https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png', alt: 'HTML', title: 'HTML', height: '40px' }),
+                                                    React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/html5.png', alt: 'HTML', title: 'HTML', height: '40px' }),
                                                     React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/css3.png', alt: 'css', title: 'css', height: '40px' }),
                                                     React.createElement('img', { src: 'https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png', alt: 'js', title: 'js', height: '40px' }),
                                                     React.createElement('img', { src: './img/phpmysql.jpeg', alt: 'php, mysql', title: 'php, mysql', height: '40px' }),
@@ -875,7 +875,7 @@ var Content = function (_React$Component3) {
                                                 React.createElement(
                                                     'td',
                                                     null,
-                                                    React.createElement('img', { src: 'https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png', alt: 'HTML', title: 'HTML', height: '40px' }),
+                                                    React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/html5.png', alt: 'HTML', title: 'HTML', height: '40px' }),
                                                     React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/css3.png', alt: 'css', title: 'css', height: '40px' }),
                                                     React.createElement('img', { src: 'https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png', alt: 'js', title: 'js', height: '40px' }),
                                                     React.createElement('img', { src: './img/phpmysql.jpeg', alt: 'php, mysql', title: 'php, mysql', height: '40px' }),
@@ -926,7 +926,7 @@ var Content = function (_React$Component3) {
                                                 React.createElement(
                                                     'td',
                                                     null,
-                                                    React.createElement('img', { src: 'https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png', alt: 'HTML', title: 'HTML', height: '40px' }),
+                                                    React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/html5.png', alt: 'HTML', title: 'HTML', height: '40px' }),
                                                     React.createElement('img', { src: 'http://w3widgets.com/responsive-slider/img/css3.png', alt: 'css', title: 'css', height: '40px' }),
                                                     React.createElement('img', { src: 'https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png', alt: 'js', title: 'js', height: '40px' }),
                                                     React.createElement('img', { src: './img/jquery-logo.png', alt: 'jquery logo', title: 'jquery logo', height: '40px' }),

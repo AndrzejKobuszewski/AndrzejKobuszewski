@@ -363,7 +363,7 @@ class Content extends React.Component {
                                             <tr>
                                                 <td>Kobuszewski.com</td>
                                                 <td>
-                                                    <img src="https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png" alt="HTML" title="HTML" height="40px" />
+                                                    <img src="http://w3widgets.com/responsive-slider/img/html5.png" alt="HTML" title="HTML" height="40px" />
                                                     <img src="http://w3widgets.com/responsive-slider/img/css3.png" alt="css" title="css" height="40px" />
                                                     <img src="https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png" alt="js" title="js" height="40px" />
                                                     <img src="./img/bootstrap4.jpg" alt="bootstrap4" title="bootstrap4" height="40px" />
@@ -386,7 +386,7 @@ class Content extends React.Component {
                                             <tr>
                                                 <td>Napędzamy Transport 4.0</td>
                                                 <td>
-                                                    <img src="https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png" alt="HTML" title="HTML" height="40px" />
+                                                    <img src="http://w3widgets.com/responsive-slider/img/html5.png" alt="HTML" title="HTML" height="40px" />
                                                     <img src="http://w3widgets.com/responsive-slider/img/css3.png" alt="css" title="css" height="40px" />
                                                     <img src="https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png" alt="js" title="js" height="40px" />
                                                     <img src="./img/phpmysql.jpeg" alt="php, mysql" title="php, mysql" height="40px" />
@@ -416,7 +416,7 @@ class Content extends React.Component {
                                             <tr>
                                                 <td>Tourfast.pl</td>
                                                 <td>
-                                                    <img src="https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png" alt="HTML" title="HTML" height="40px" />
+                                                    <img src="http://w3widgets.com/responsive-slider/img/html5.png" alt="HTML" title="HTML" height="40px" />
                                                     <img src="http://w3widgets.com/responsive-slider/img/css3.png" alt="css" title="css" height="40px" />
                                                     <img src="https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png" alt="js" title="js" height="40px" />
                                                     <img src="./img/phpmysql.jpeg" alt="php, mysql" title="php, mysql" height="40px" />
@@ -443,7 +443,7 @@ class Content extends React.Component {
                                             <tr>
                                                 <td>Coders Lab</td>
                                                 <td>
-                                                    <img src="https://www.dutchwebdesign.nl/wp-content/uploads/2011/02/html5-1920x1200.png" alt="HTML" title="HTML" height="40px" />
+                                                    <img src="http://w3widgets.com/responsive-slider/img/html5.png" alt="HTML" title="HTML" height="40px" />
                                                     <img src="http://w3widgets.com/responsive-slider/img/css3.png" alt="css" title="css" height="40px" />
                                                     <img src="https://michel.dumont.io/mdgFront/uploads/post/19/logo_javascript-small.png" alt="js" title="js" height="40px" />
                                                     <img src="./img/jquery-logo.png" alt="jquery logo" title="jquery logo" height="40px" />

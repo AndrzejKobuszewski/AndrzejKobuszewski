@@ -174,7 +174,6 @@ var Oferta = function (_React$Component2) {
         };
 
         _this2.state = { total: 0, Mwh: 0, Mwd: 0, inputValue: 0, inputValue1: 0 };
-
         console.log(isNaN(_this2.total));
         return _this2;
     }
@@ -392,19 +391,19 @@ var Oferta = function (_React$Component2) {
                                         'p',
                                         { className: 'card-text' },
                                         'Razem do zap\u0142aty: ',
-                                        this.state.total + ' zł'
+                                        parseInt(this.state.total) + ' zł'
                                     ),
                                     React.createElement(
                                         'p',
                                         { className: 'card-text', alt: 'Man-working-days', title: 'Man-working-days' },
                                         'Liczba dni roboczych: ',
-                                        this.state.Mwd + ' Mwd'
+                                        parseInt(this.state.Mwd) + ' Mwd'
                                     ),
                                     React.createElement(
                                         'p',
                                         { className: 'card-text', alt: 'Man-working-hours', title: 'Man-working-hours' },
                                         'Liczba godzin roboczych: ',
-                                        this.state.Mwh + ' Mwh'
+                                        parseInt(this.state.Mwh) + ' Mwh'
                                     ),
                                     React.createElement(
                                         'form',

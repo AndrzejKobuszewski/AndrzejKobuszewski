@@ -13,8 +13,19 @@
         <script src=''></script>
 </head>
 <body>   
+    <?php if (strlen($_POST['email'])>5 && (strlen($_POST['MsgContent'])>5)) {
+         
+         $to = "frideric.warsaw@tourfast.pl";
+         $subject = "MyResumee message";
+         $txt = $_POST["MsgContent"];
+         $headers = "From: ". $_POST['email'];
+         mail($to,$subject,$txt,$headers);
+
+    } else 
+    {echo "Nie wysłano wiadomości";}
+   
+    ?>
         <main class = "container-fluid">
-        
                 <div id="App"></div>
                
                 <section id="Kontakt">
@@ -27,25 +38,32 @@
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
-                                    <div class="modal-body">
-                                      <form>
-                                        <div class="form-group">
-                                                <label for="exampleInputEmail1">Adres e-mail nadawcy</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mickey@miceservername.com">
-                                                <small id="emailHelp" class="form-text text-muted">Nikomu nie udostępniam adresów e-mail</small>
+                                      <form method="POST" id="contact-form">
+                                        <div class="modal-body">
+                                        
+                                            <div class="form-group">
+                                                    <label for="exampleInputEmail1">Adres e-mail nadawcy</label>
+                                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mickey@miceservername.com">
+                                                    <small id="emailHelp" class="form-text text-muted">Nikomu nie udostępniam adresów e-mail</small>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="message-text" class="col-form-label">Treść wiadomości:</label>
+                                              <textarea class="form-control" name ="MsgContent" id="message-text">Pisz swobodnie. Jak Ci mogę pomóc?</textarea>
+                                            </div>
+                                       
                                         </div>
-                                        <div class="form-group">
-                                          <label for="message-text" class="col-form-label">Treść wiadomości:</label>
-                                          <textarea class="form-control" id="message-text">Zielony przycisk "Wyślij" nie działa. Node.js poznam w kolejnym swoim projekcie, tymczasem wyślij e-mail, lub zadzwoń (połączenie dostępne tylko w widoku mobilnym).</textarea>
+                                        <div class="modal-footer">
+                                          <button type="button"  class="d-xl-none d-lg-none d-md-none btn btn-secondary"> <a href="callto://+48660675708">Porozmawiajmy</a></button>
+                                          <button type="button"  class="btn btn-secondary"> <a style= 'text-decoration: none; color: cornsilk' href='mailto:andrzej@kobuszewski.com?body=Pisz swobodnie. Jak Ci mogę pomóc?&subject=Wiadomość ze strony Kobuszewski.com"'>E-mail</a></button>
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                                          <button type="submit" class="btn btn-success">Wyślij</button>
+                                          <?php var_dump($_POST["email"]); 
+                                          var_dump($_POST["MsgContent"]);
+                                          var_dump(strlen($_POST['email'])); 
+                                                                                  
+                                          ?>
                                         </div>
                                       </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button"  class="d-xl-none d-lg-none d-md-none btn btn-secondary"> <a href="callto://+48660675708">Porozmawiajmy</a></button>
-                                      <button type="button"  class="btn btn-secondary"> <a style= 'text-decoration: none; color: cornsilk' href='mailto:andrzej@kobuszewski.com?body=Pisz swobodnie. Jak Ci mogę pomóc?&subject=Wiadomość ze strony Kobuszewski.com"'>E-mail</a></button>
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-                                      <button type="button" class="btn btn-success">Wyślij</button>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -70,28 +88,6 @@
 <script src="App.js"></script>
 <script src="https://www.paypal.com/sdk/js?client-id=AaPLjsg6OyE4g37MyOyJKDvkfBcCxiatVstqJxO7dDGL_zQrAeAOwJ5r1MxSQkdEwLY__KcsBetmGLUE"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
 </script>
-<!-- <script>
-  paypal.Buttons({
-    createOrder: function(data, actions) {
-     
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: '0.01'
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-     
-      return actions.order.capture().then(function(details) {
-        
-        alert('Transaction completed by ' + details.payer.name.given_name);
-      });
-    }
-  }).render('#paypal-button-container');
-  
-</script> -->
 <script> paypal.Buttons().render('#paypal-button-container')</script>
 
 </body>

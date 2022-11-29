@@ -13,19 +13,7 @@
         <script src=''></script>
 </head>
 <body>   
-    <?php if (strlen($_POST['email'])>5 && (strlen($_POST['MsgContent'])>5)) {
-         
-         $to = "frideric.warsaw@tourfast.pl";
-         $subject = "MyResumee message";
-         $txt = $_POST["MsgContent"];
-         $headers = "From: ". $_POST['email'];
-         mail($to,$subject,$txt,$headers);
-
-    } else 
-    {echo "Nie wysłano wiadomości";}
-   
-    ?>
-        <main class = "container-fluid">
+         <main class = "container-fluid">
                 <div id="App"></div>
                
                 <section id="Kontakt">
@@ -56,12 +44,7 @@
                                           <button type="button"  class="d-xl-none d-lg-none d-md-none btn btn-secondary"> <a href="callto://+48660675708">Porozmawiajmy</a></button>
                                           <button type="button"  class="btn btn-secondary"> <a style= 'text-decoration: none; color: cornsilk' href='mailto:andrzej@kobuszewski.com?body=Pisz swobodnie. Jak Ci mogę pomóc?&subject=Wiadomość ze strony Kobuszewski.com"'>E-mail</a></button>
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-                                          <button type="submit" class="btn btn-success">Wyślij</button>
-                                          <?php var_dump($_POST["email"]); 
-                                          var_dump($_POST["MsgContent"]);
-                                          var_dump(strlen($_POST['email'])); 
-                                                                                  
-                                          ?>
+                                          <button type="input" class="btn btn-success">Wyślij</button>
                                         </div>
                                       </form>
                                   </div>

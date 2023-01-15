@@ -60,11 +60,9 @@ class Nav_Menu extends React.Component {
 class Oferta extends React.Component{
         constructor(props){
             super(props)
-            this.state= {total:0, Mwh :0, Mwd:0, inputValue: 0, inputValue1: 0}
-               
+            this.state= {total:0, Mwh :0, Mwd:0, inputValue: 0, inputValue1: 0}               
         console.log(isNaN(this.total));
-    }
-        
+    }        
        clickAddMWh=()=>{this.setState({Mwh: this.inputValue, total: this.inputValue1*200+this.inputValue*30});  console.log(this.Mwh)}
        clickAddMWd=()=>{this.setState({Mwd: this.inputValue1, total: this.inputValue1*200+this.inputValue*30}); console.log(this.Mwd)}
        ClearOrder=()=>{this.setState({Mwh: 0, Mwd: 0, total: 0});}
@@ -159,15 +157,15 @@ class Oferta extends React.Component{
                                             <div className="card-body">
                                               <h5 className="card-title">Koszyk </h5>
                                               <p className="card-text" >
-                                                    Razem do zapłaty: {this.state.total + ' zł'}
+                                                    Razem do zapłaty: {parseInt(this.state.total) + ' zł'}
 
                                               </p>
                                               <p className="card-text" alt="Man-working-days" title="Man-working-days">
-                                                    Liczba dni roboczych: {this.state.Mwd + ' Mwd'}
+                                                    Liczba dni roboczych: {parseInt(this.state.Mwd) + ' Mwd'}
 
                                               </p>
                                               <p className="card-text" alt="Man-working-hours" title="Man-working-hours">
-                                                    Liczba godzin roboczych: {this.state.Mwh + ' Mwh'}
+                                                    Liczba godzin roboczych: {parseInt(this.state.Mwh) + ' Mwh'}
 
                                               </p>
                                             <form>
@@ -176,11 +174,8 @@ class Oferta extends React.Component{
                                                     <small id="emailHelp" className="form-text text-muted">Zacznij zakupy od początku</small>
                                                     <button onClick={this.ClearOrder} type="button" className="btn btn-info my-1" >Opróżnij koszyk</button>
                                                     {/* <small id="emailHelp" className="form-text text-muted mt-2">Pay Pal</small>
-                                                   
                                                     <button type="button"className=" btn btn-success mb-1">KUP TERAZ </button> */}
-                                                    
                                                     <div id="paypal-button-container"></div> 
-                                                    
                                                     {/* {paypal.Buttons().render('#paypal-button-container')}                                       */}
                                                    
                                                   
